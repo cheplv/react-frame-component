@@ -50,6 +50,9 @@ export class Frame extends Component {
         'DOMContentLoaded',
         this.handleLoad
       );
+      if (doc.readyState === 'complete') {
+        this.handleLoad();
+      }
     }
   }
 
